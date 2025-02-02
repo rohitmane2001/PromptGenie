@@ -1,0 +1,67 @@
+/* cursor.css */
+.prompt-genie-button {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 999999;
+}
+
+.prompt-genie-button:hover {
+  transform: scale(1.1);
+  background-color: #45a049;
+}
+
+.prompt-genie-button::after {
+  content: "✨";
+  color: white;
+  font-size: 14px;
+}
+
+.prompt-genie-loading {
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+}
+
+.prompt-genie-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 999999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  max-width: 400px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

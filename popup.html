@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PromptGenie</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    select, input, button {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-group">
+    <label>Select AI Platform:</label>
+    <select id="platformSelect">
+      <option value="gemini">Google Gemini</option>
+      <option value="openai">OpenAI</option>
+      <option value="claude">Claude</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>API Key:</label>
+    <input type="password" id="apiKey" placeholder="Enter your API key">
+  </div>
+  <button id="saveButton">Save Settings</button>
+  <script src="popup.js"></script>
+</body>
+</html>

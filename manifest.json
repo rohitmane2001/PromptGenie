@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "PromptGenie",
+  "version": "1.0",
+  "description": "AI Prompt optimizer for various platforms",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["cursor.css"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
